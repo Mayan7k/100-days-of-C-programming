@@ -1,24 +1,21 @@
 //Write a program to find the HCF (GCD) of two numbers.
 #include <stdio.h>
 
-int main()
-{
-    int n1,n2;
+int main() {
+    int n1, n2;
+    
+    printf("Enter two numbers: ");
+    scanf("%d %d", &n1, &n2);
 
-    scanf("%d %d", &n1,&n2); 
-   while (n2 >0)
-    {
-     
-      if (n1/n2 !=0)
-      { int rem= n1%n2;
-        n1=n2;
-        n2=rem;
-        
-      
+    
+    while (n2 > 0) {
+        int rem = n1 % n2; 
+        n1 = n2;          
+        n2 = rem;         
     }
-     
-  }
-printf("the hcf is %d",n2);
-  
+
+    
+    printf("The HCF is %d\n", n1); 
+    
     return 0;
 }
